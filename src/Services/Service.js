@@ -42,7 +42,8 @@ export const loginResource = '/Login';
 
 //const apiPort = '5000';
 //const localApiUri = `http://localhost:${apiPort}/api`;
-const externallApiUri = `https://webapigabriel.azure-api.net/api`;
+
+const externallApiUri = `https://eventapiwebgabriel.azurewebsites.net/api`;
 // const externalApiUri = null;
 
 const api = axios.create({
