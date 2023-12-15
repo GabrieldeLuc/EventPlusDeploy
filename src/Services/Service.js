@@ -4,7 +4,7 @@ import axios from 'axios';
  * Módulo para trabalhar com apis. Disponibiliza as rotas da api bem como o serviço com a biblioteca axios
  */
 
-
+export const detailsEventResource = '/detalhes-evento';
 
 /**
  * Rota para o recurso Evento

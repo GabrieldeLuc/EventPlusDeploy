@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"; //v6
 
+
 // imports dos componentes de página
 import HomePage from "../pages/HomePage/HomePage";
 import TipoEventos from "../pages/TipoEventosPage/TipoEventosPage";
@@ -11,6 +12,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { PrivateRoute } from "./PrivateRoute";
 import EventosAlunoPage from "../pages/EventosAlunoPage/EventosAlunoPage";
+import DetalhesEvento from "../pages/DetalhesEventoPage/DetalhesEvento";
 
 // Componente Rota
 const Rotas = () => {
@@ -48,8 +50,13 @@ const Rotas = () => {
           }
         />
 
+      
+
+
         <Route element={<LoginPage />} path="/login" />
         <Route element={<TestePage />} path="/testes" />
+
+        <Route element={<DetalhesEvento />} path="/detalhes-evento/:idEvento"/> 
       </Routes>
 
       <Footer />

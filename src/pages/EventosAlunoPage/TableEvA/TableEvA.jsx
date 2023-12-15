@@ -6,10 +6,13 @@ import ToggleSwitch from "../../../components/Toggle/Toggle";
 import "react-tooltip/dist/react-tooltip.css";
 // import { Tooltip } from "react-tooltip";
 
-// import trashDelete from "../../../assets/images/trash-delete.svg";
-import "./TableEvA.css";
+import viewDetails from "../../../assets/images/olho.png"; 
 
-const Table = ({ dados, fnConnect = null, fnShowModal = null }) => {
+//import trashDelete from "../../../assets/images/trash-delete.svg";
+import "./TableEvA.css";
+import {Link} from "react-router-dom"; 
+
+const Table = ({ dados, fnShowModal = null, fnConnect = null, view = null }) => {
   return (
     <table className="tbal-data">
       <thead className="tbal-data__head">
@@ -37,6 +40,14 @@ const Table = ({ dados, fnConnect = null, fnShowModal = null }) => {
                 {/* {e.dataEvento} */}
                 {dateFormateDbToView(e.dataEvento)}
               </td>
+
+                {view != "no-view" ? ( 
+              <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
+                <Link to="/detalhes-evento" state={e}>
+                  <img src={viewDetails}  className="table-data__icon" alt="" />
+                </Link>
+              </td>
+                ) : null}
 
               <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
                 {/* imagem do comentário - abre o modal */}

@@ -4,10 +4,13 @@ import "./TableEv.css";
 import editPen from "../../../assets/images/edit-pen.svg";
 import trashDelete from "../../../assets/images/trash-delete.svg";
 import { dateFormateDbToView } from "../../../Utils/stringFunctions";
+import viewDetails from "../../../assets/images/olho.png"; 
 
 // importa a biblioteca de tootips ()
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
+
+import {Link} from "react-router-dom"; 
 
 // import trashDelete from "../../../assets/images/trash-delete.svg";
 

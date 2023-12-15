@@ -1,0 +1,64 @@
+@font-face {
+    font-family: Poppins-Black;
+    src: url(../../assets/fonts/Poppins/Poppins-Black.ttf);
+  }
+  
+  @font-face {
+    font-family: Poppins-Medium;
+    src: url(../../assets/fonts/Poppins/Poppins-Medium.ttf);
+  }
+  
+  .tooltip {
+    color: #fff !important;
+    background-color: #b51d44 !important;
+  }
+  
+  .event-card-feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 250px;
+    height: 250px;
+    padding: 25px;
+    border: 1px solid white;
+    border-radius: 5px;
+    overflow: auto;
+  }
+  
+  /* Largura da barra de rolagem */
+  .event-card-feedback::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  .event-card__title-feedback {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Poppins-Medium;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .event-card__description-feedback {
+    font-family: Poppins-Black;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .exibe-palavra {
+    font-family: Poppins-Black;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: black;
+    border-radius: 20px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .event-card {
+      width: 250px;
+      height: 250px;
+    }
+  }

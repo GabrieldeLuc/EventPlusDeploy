@@ -11,7 +11,7 @@ import Container from "../../components/Container/Container";
 import api from "../../Services/Service";
 import Notification from "../../components/Notification/Notification";
 import { nextEventResource } from "../../Services/Service";
-
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [nextEvents, setNextEvents] = useState([]);
@@ -25,7 +25,6 @@ const HomePage = () => {
         const dados = await promise.data;
         // console.log(dados);
         setNextEvents(dados); //atualiza o state
-
       } catch (error) {
         console.log("não trouxe os próximos eventos, verifique lá!");
         // setNotifyUser({
@@ -43,7 +42,6 @@ const HomePage = () => {
   }, []);
 
   return (
-    
     <MainContent>
       {<Notification {...notifyUser} setNotifyUser={setNotifyUser} />}
       <Banner />
@@ -62,9 +60,11 @@ const HomePage = () => {
                   description={e.descricao}
                   eventDate={e.dataEvento}
                   idEvent={e.idEvento}
+                  
                 />
               );
             })}
+           
           </div>
         </Container>
       </section>
